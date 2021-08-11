@@ -1,0 +1,24 @@
+
+body{
+    background-color: rgb(80, 77, 77);
+}
+p{
+    margin-top:10px 0 !important;
+}
+
+.login-container{
+    text-align: center;
+    width: 400px;
+    margin-top:160px
+}
+
+.btn-float{
+    float:left;
+    margin-right: 10px;
+}
+.img-small {
+    width:180px
+}
+.whiteColor{        
+    color:white; 
+}

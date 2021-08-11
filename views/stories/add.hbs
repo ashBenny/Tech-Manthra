@@ -1,0 +1,33 @@
+<h3 class="whiteColor">Add Post</h3>
+<div class="row">
+    <form action="/stories" method="POST" class="col s12" >
+        <div class="row">
+            <div class="input-field " >
+                <input type="text" id="title" name="title">
+                <label for="title" class="whiteColor">Title</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field ">
+                <select id="status" name="status" >
+                    <option value="public" selected>Make it as a Public Story</option>
+                    <option value="private">Make it as a Private Story</option>
+                </select>
+                <label for="status">Status</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field whiteColor">
+                <h6>Write the Tech Story:</h6>
+                <textarea id="body" name="body"></textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <input type="submit" value="Save" class="btn">
+            <a href="/dashboard" class="btn orange">Cancel</a>
+        </div>
+    </form>
+</div>

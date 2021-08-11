@@ -1,0 +1,41 @@
+
+<h4 class="whiteColor">Welcome {{name}} !!</h3>
+<h5 style="color : rgb(247, 78, 78)">Here is your posts</h5>
+<br><br>
+{{#if stories}}
+
+    <table class="stripped whiteColor">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Published Date</th>
+                <th>Status</th>
+                <th>Update / Delete</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each stories}}
+                <tr>
+                    <td><a href="/stories/{{_id}}">{{title}}</a></td>
+                    <td>{{ formatDate createdAt 'D MMM YYYY, h:mm a' }}</td>
+                    <td><span class="dash-status">{{status}}</span></td>
+                    <td>
+                        
+                        <a href="/stories/edit/{{_id}}" class="btn-small btn-float"><i class="fa fa-edit"></i></a>
+                        <form action="/stories/delete/{{_id}}" method="post" id="delete-form">
+                            <input type="hidden" name="_method" value="DELETE">
+                            <button type='submit' class="btn-small btn-float red">
+                                <i class="fa fa-trash"></i>
+                            </button>
+                        </form>
+                    </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+{{else}}
+
+    <p>No Stories ? Create one !!</p>
+
+{{/if}}
