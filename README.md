@@ -1,4 +1,4 @@
-# Tech_Manthra
+# Tech-Manthra
 ( NodeJS, Express Js, MongoDB, Handlebars(hbs) )
 
 ## Objective
